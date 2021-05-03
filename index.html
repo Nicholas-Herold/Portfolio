@@ -4,36 +4,74 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./assests/normalize.css" />
-		<link rel="stylesheet" href="./assests/style.css" />
+		<link rel="stylesheet" href="./assests/Styles/html5reset-1.6.1.css" />
+		<link rel="stylesheet" href="./assests/Styles/style.css" />
 		<title>Nick Herold Portfolio</title>
 	</head>
 	<body>
-		<div class="program"></div>
 		<header>
-			<span>Nick Herold</span>
-			<nav>
-				<ul>
-					<li><a href="">Projects</a></li>
-					<li><a href="">About</a></li>
-					<li><a href="">Contact</a></li>
-					<li><a href="">Resume</a></li>
-				</ul>
-			</nav>
-		</header>
-		<main>
-			<section>
-				<h1>Hi my name is Nick Herold</h1>
+			<section class="heading">
+				<h1>NH</h1>
+				<nav>
+					<ul>
+						<li><a href="#project-jump">Projects</a></li>
+						<li><a href="#about-jump">About</a></li>
+						<li><a href="">Contact</a></li>
+						<li><a href="">Resume</a></li>
+					</ul>
+				</nav>
+			</section>
+			<section class="intro">
+				<h2>Hi my name is Nick Herold</h2>
 				<h2>Full-Stack web developer</h2>
-				<div><button>Welcome</button></div>
+				<button>welcome</button>
+			</section>
+		</header>
+
+		<main>
+			<!-- projects section -->
+			<h3 id="project-jump">Projects</h3>
+			<section class="projects">
+				<div class="project-card">
+					<img src="./assests/Images/pexels-pixabay-414579 (3).jpg" alt="" />
+				</div>
+				<div class="project-card">
+					<img
+						src="./assests/Images/pexels-junior-teixeira-2047905.jpg"
+						alt=""
+					/>
+				</div>
+				<div class="project-card">
+					<img src="./assests/Images/pexels-luis-gomes-546819 (2).jpg" alt="" />
+				</div>
+				<div class="project-card">
+					<img src="./assests/Images/pexels-marta-branco-1194713.jpg" alt="" />
+				</div>
+				<div class="project-card">
+					<img src="./assests/Images/pexels-oleg-magni-1005644.jpg" alt="" />
+				</div>
+				<div class="project-card">
+					<img src="./assests/Images/pexels-pixabay-247676 (4).jpg" alt="" />
+				</div>
+			</section>
+			<!-- About Me -->
+			<section>
+				<h3 id="about-jump">About Me</h3>
+				<div class="about">
+					<p>
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+						Reiciendis, quis alias voluptatem cum autem animi c
+					</p>
+				</div>
 			</section>
 		</main>
-		<!-- Links in footer -->
+		<!-- social Links in footer -->
 		<footer>
 			<ul>
-				<li><link rel="stylesheet" href="" />facebook</li>
-				<li><link rel="stylesheet" href="" />git hub</li>
-				<li><link rel="stylesheet" href="" />Linkedin</li>
+				<li></li>
+				<li><a href="">Linkedin</a></li>
+				<li><a href="">facebook</a></li>
+				<li><a href="">git hub</a></li>
 			</ul>
 		</footer>
 	</body>
