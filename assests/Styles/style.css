@@ -18,43 +18,61 @@ header {
 	background-size: cover;
 	background-position: center;
 	height: 100vh;
+	width: 100vw;
 	display: grid;
-	grid-template-columns: repeat(5, minmax(100px, 1fr));
-	grid-template-rows: repeat(5, minmax(100px, 1fr));
+	grid-template-rows: 2fr 2fr 1fr;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-areas:
+		"heading heading heading"
+		"intro intro intro"
+		"end end end";
 }
+
 .heading {
-	grid-column: 1/ -1;
-	width: 96%;
+	grid-area: heading;
+
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+	justify-content: center;
 	align-items: center;
-	justify-content: space-between;
-	padding: 2%;
 }
 
 h1 {
 	font-size: 80px;
-	justify-self: start;
 }
 
 header nav ul {
-	justify-content: end;
 	display: flex;
-	flex: 1 1 100;
-	justify-content: space-between;
+	flex-direction: column;
+	margin-top: 30px;
+	align-items: center;
 }
 
 header nav ul li {
 	list-style: none;
-	font-size: 120%;
-	padding: 20px;
+	font-size: 100%;
+	padding: 10px;
 }
 
 .intro {
-	grid-column: 3 / 4;
-	grid-row: 3 / 4;
+	grid-area: intro;
 	color: blueviolet;
 	font-size: 30px;
+	text-align: center;
+	margin-top: 50px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+main {
+	display: grid;
+	grid-template-columns: auto auto 2fr;
+	grid-template-rows: 40vh auto auto 1fr;
+	grid-template-areas:
+		"asidea about end"
+		"asidep project end"
+		"asidec contact end"
+		"footer footer footer";
 }
 
 h3 {
@@ -63,28 +81,69 @@ h3 {
 	margin: 15px;
 }
 
-.projects {
-	width: 96%;
-	padding: 30px;
-	display: grid;
+#about-jump {
+	grid-area: asidea;
+}
 
-	/* flex-direction: row;
-	flex-wrap: wrap;
-	flex: 1 1 200px;
-	justify-content: center; */
+.about {
+	grid-area: about;
+	color: black;
+}
+
+#project-jump {
+	grid-area: asidep;
+}
+.projects {
+	grid-area: project;
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr;
+	grid-template-rows: auto;
+	gap: 20px;
 }
 
 .project-card {
 	color: aquamarine;
 	border: 2px solid blue;
-	min-width: 10%;
-	max-width: 25%;
-	margin: 10px;
+	box-sizing: content-box;
 }
 
 .project-card img {
+	height: 100%;
 	width: 100%;
-	max-height: 150px;
 	object-fit: cover;
 	object-position: center;
+}
+
+#contact-jump {
+	grid-area: asidec;
+}
+@media only screen and (min-width: 600px) {
+	.heading {
+		width: 95vw;
+		margin: 20px;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	header nav ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-content: center;
+	}
+	.intro {
+		text-align: center;
+	}
+
+	/* .projects {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+
+	#p1 {
+		grid-column-start: 1;
+		grid-column-end: 3;
+		width: 80%;
+	} */
 }
