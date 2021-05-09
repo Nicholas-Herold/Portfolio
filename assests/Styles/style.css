@@ -30,7 +30,6 @@ header {
 
 .heading {
 	grid-area: heading;
-
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -66,8 +65,8 @@ header nav ul li {
 
 main {
 	display: grid;
-	grid-template-columns: auto auto 2fr;
-	grid-template-rows: 40vh auto auto 1fr;
+	grid-template-columns: auto auto 3fr;
+	grid-template-rows: 30vh auto auto auto;
 	grid-template-areas:
 		"asidea about end"
 		"asidep project end"
@@ -77,7 +76,7 @@ main {
 
 h3 {
 	color: chartreuse;
-	font-size: 30px;
+	font-size: 20px;
 	margin: 15px;
 }
 
@@ -95,15 +94,15 @@ h3 {
 }
 .projects {
 	grid-area: project;
-	display: grid;
-	grid-template-columns: 1fr 3fr 1fr;
-	grid-template-rows: auto;
-	gap: 20px;
+	display: flex;
+	flex-direction: column;
+	max-width: 85%;
 }
 
 .project-card {
 	color: aquamarine;
 	border: 2px solid blue;
+	max-width: 100%;
 	box-sizing: content-box;
 }
 
@@ -117,6 +116,31 @@ h3 {
 #contact-jump {
 	grid-area: asidec;
 }
+
+.contact {
+	grid-area: contact;
+	background-color: black;
+	margin: 20px;
+	font-size: 15px;
+}
+.contact_list ul {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	min-height: 40px;
+	justify-content: space-evenly;
+}
+
+.footer {
+	width: 100%;
+	height: 40px;
+}
+.footer ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
 @media only screen and (min-width: 600px) {
 	.heading {
 		width: 95vw;
@@ -136,14 +160,19 @@ h3 {
 		text-align: center;
 	}
 
-	/* .projects {
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr 1fr;
+	.projects {
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 90%;
+		flex: 1 1 100px;
+		justify-content: space-evenly;
 	}
-
-	#p1 {
-		grid-column-start: 1;
-		grid-column-end: 3;
-		width: 80%;
-	} */
+	.project-card {
+		max-width: 30vw;
+	}
+	.contact_list ul {
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: center;
+	}
 }
